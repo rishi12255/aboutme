@@ -34,9 +34,9 @@ function Projects() {
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         >
-          <h3 className="text-xl font-semibold text-white">Weather App</h3>
+          <h3 className="text-xl font-semibold text-white">Food blog</h3>
           <p className="text-gray-400 mt-3 text-sm sm:text-base">
-            Live weather data with beautiful UI.
+            Taste every dishes staying at home.
           </p>
         </motion.div>
 
@@ -46,7 +46,7 @@ function Projects() {
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         >
-          <a href="http://localhost:5173/">
+          <a href="rishimallaportfolio.netlify.app">
             <h3 className="text-xl font-semibold text-white">Portfolio</h3>
           <p className="text-gray-400 mt-3 text-sm sm:text-base">
             The site you're viewing now!
