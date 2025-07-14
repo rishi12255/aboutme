@@ -15,16 +15,16 @@ function Projects() {
       </h2>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Project Card */}
+      
         <motion.div
           tabIndex={0}
           className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         >
-          <h3 className="text-xl font-semibold text-white">Typing Speed Test</h3>
+          <h3 className="text-xl font-semibold text-white">School Websites</h3>
           <p className="text-gray-400 mt-3 text-sm sm:text-base">
-            Test your typing accuracy and speed in real-time.
+          A beautiful school, without leaving home.
           </p>
         </motion.div>
 
