@@ -46,12 +46,12 @@ function Projects() {
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         >
-          <a href="rishimallaportfolio.netlify.app">
+          
             <h3 className="text-xl font-semibold text-white">Portfolio</h3>
           <p className="text-gray-400 mt-3 text-sm sm:text-base">
             The site you're viewing now!
           </p>
-          </a>
+        
           
         </motion.div>
       </div>
