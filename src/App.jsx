@@ -4,6 +4,7 @@ import About from './Pages/About'
 import Projects from './Pages/Projects'
 import Footer from './Pages/Footer'
 import Tech from './Pages/Tech'
+import Contact from './Pages/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
      <About/>
      <Tech/>
      <Projects/> 
+     <Contact/>
      <Footer/>
       </div>
     
