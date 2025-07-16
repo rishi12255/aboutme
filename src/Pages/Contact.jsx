@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +11,11 @@ function Contact() {
   });
 
   const [status, setStatus] = useState('');
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   const handleChange = (e) => {
     setFormData({
@@ -21,10 +28,10 @@ function Contact() {
     e.preventDefault();
 
     emailjs.send(
-      'service_03t9uur',       
-      'template_dun8ua4',     
+      'service_03t9uur',
+      'template_dun8ua4',
       formData,
-      '30cy7zYejeV5WxG0L'      
+      '30cy7zYejeV5WxG0L'
     ).then(
       (response) => {
         console.log('SUCCESS!', response.status, response.text);
@@ -39,7 +46,13 @@ function Contact() {
   };
 
   return (
-    <div className="p-8 max-w-md mx-auto bg-gray-800 rounded-md shadow-md mt-12 mb-12">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className="p-8 max-w-md mx-auto bg-gray-800 rounded-md shadow-md mt-12 mb-12"
+    >
       <h2 className="text-2xl font-bold mb-4 text-center">Send Me a Message</h2>
       <form onSubmit={sendEmail} className="flex flex-col space-y-4">
         <input
@@ -77,7 +90,7 @@ function Contact() {
         </button>
         {status && <p className="text-center mt-2">{status}</p>}
       </form>
-    </div>
+    </motion.div>
   );
 }
 
