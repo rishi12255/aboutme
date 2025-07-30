@@ -18,39 +18,40 @@ function Projects() {
       
         <motion.div
           tabIndex={0}
-          className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="bg-gray-800 p-6 rounded-xl cursor-pointer shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         >
           <h3 className="text-xl font-semibold text-white">School Websites</h3>
           <p className="text-gray-400 mt-3 text-sm sm:text-base">
-          A beautiful school, without leaving home.
+          A beautiful school, without leaving home!
           </p>
         </motion.div>
 
         <motion.div
           tabIndex={0}
-          className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="bg-gray-800 p-6 rounded-xl cursor-pointer shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         >
           <h3 className="text-xl font-semibold text-white">Food blog</h3>
           <p className="text-gray-400 mt-3 text-sm sm:text-base">
-            Taste every dishes staying at home.
+            Taste every dishes staying at home!
           </p>
         </motion.div>
 
         <motion.div
           tabIndex={0}
-          className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="bg-gray-800 p-6 rounded-xl cursor-pointer shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         >
           
-            <h3 className="text-xl font-semibold text-white">Portfolio</h3>
-          <p className="text-gray-400 mt-3 text-sm sm:text-base">
-            The site you're viewing now!
-          </p>
+           <h3 className="text-xl font-semibold text-white">Fully Functional Calculator</h3>
+<p className="text-gray-400 mt-3 text-sm sm:text-base">
+  Perform quick and accurate calculations fast, simple, and reliable!
+</p>
+
         
           
         </motion.div>

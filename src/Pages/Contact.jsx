@@ -61,7 +61,7 @@ function Contact() {
           placeholder="Your Name"
           value={formData.name}
           onChange={handleChange}
-          className="p-3 rounded bg-gray-700 border border-gray-600 text-white"
+          className="p-3 rounded bg-gray-700 border border-gray-600 cursor-pointer text-white"
           required
         />
         <input
@@ -70,7 +70,7 @@ function Contact() {
           placeholder="Your Email"
           value={formData.email}
           onChange={handleChange}
-          className="p-3 rounded bg-gray-700 border border-gray-600 text-white"
+          className="p-3 rounded bg-gray-700 border cursor-pointer border-gray-600 text-white"
           required
         />
         <textarea
@@ -79,12 +79,12 @@ function Contact() {
           value={formData.message}
           onChange={handleChange}
           rows="5"
-          className="p-3 rounded bg-gray-700 border border-gray-600 text-white"
+          className="p-3 rounded bg-gray-700 border cursor-pointer border-gray-600 text-white"
           required
         />
         <button
           type="submit"
-          className="bg-blue-600 hover:bg-blue-700 transition-colors p-3 rounded text-white font-semibold"
+          className="bg-blue-600 hover:bg-blue-700 cursor-pointer transition-colors p-3 rounded text-white font-semibold"
         >
           Send Message
         </button>
