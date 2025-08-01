@@ -1,60 +1,62 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const projects = [
+  {
+    title: 'School Website',
+    description: 'A beautiful school portal built for online presence and interaction.',
+  },
+  {
+    title: 'Food Blog',
+    description: 'Share recipes and food experiences with a clean, responsive layout.',
+  },
+  {
+    title: 'Functional Calculator',
+    description: 'A simple and effective calculator built with modern UI principles.',
+  },
+];
 
 function Projects() {
   return (
     <motion.section
+      id="projects"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="py-16 px-6 max-w-6xl mx-auto"
+      transition={{ duration: 1.5, ease: 'easeOut' }}
+      className="py-28 px-6 max-w-7xl mx-auto"
+      tabIndex={-1}
+      aria-label="Projects showcase"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold text-green-400 mb-12 text-center">
-        My Projects
+      <h2 className="text-4xl sm:text-5xl font-bold text-center text-green-400 mb-16">
+        Projects
       </h2>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-        <motion.div
-          tabIndex={0}
-          className="bg-gray-800 p-6 rounded-xl cursor-pointer shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
-          whileHover={{ scale: 1.05 }}
-          whileFocus={{ scale: 1.05 }}
-        >
-          <h3 className="text-xl font-semibold text-white">School Websites</h3>
-          <p className="text-gray-400 mt-3 text-sm sm:text-base">
-          A beautiful school, without leaving home!
-          </p>
-        </motion.div>
-
-        <motion.div
-          tabIndex={0}
-          className="bg-gray-800 p-6 rounded-xl cursor-pointer shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
-          whileHover={{ scale: 1.05 }}
-          whileFocus={{ scale: 1.05 }}
-        >
-          <h3 className="text-xl font-semibold text-white">Food blog</h3>
-          <p className="text-gray-400 mt-3 text-sm sm:text-base">
-            Taste every dishes staying at home!
-          </p>
-        </motion.div>
-
-        <motion.div
-          tabIndex={0}
-          className="bg-gray-800 p-6 rounded-xl cursor-pointer shadow-md hover:shadow-green-400 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
-          whileHover={{ scale: 1.05 }}
-          whileFocus={{ scale: 1.05 }}
-        >
-          
-           <h3 className="text-xl font-semibold text-white">Fully Functional Calculator</h3>
-<p className="text-gray-400 mt-3 text-sm sm:text-base">
-  Perform quick and accurate calculations fast, simple, and reliable!
-</p>
-
-        
-          
-        </motion.div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {projects.map(({ title, description }, index) => (
+          <motion.div
+            key={index}
+            tabIndex={0}
+            className="group bg-gradient-to-br from-gray-800 to-gray-900 p-1 rounded-xl hover:shadow-2xl hover:shadow-green-400/30 transition-shadow duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+            whileHover={{ scale: 1.04 }}
+            whileFocus={{ scale: 1.04 }}
+            aria-label={`${title} project`}
+          >
+            <div className="bg-gray-900 rounded-lg p-6 h-full flex flex-col justify-between transition duration-300 group-hover:bg-opacity-90">
+              <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+              <p className="text-gray-400 text-sm sm:text-base">{description}</p>
+              <div className="mt-5">
+                <button
+                  className="text-green-400 font-medium text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-green-400 rounded"
+                  onClick={() => alert(`More info about "${title}" coming soon!`)}
+                  aria-label={`Learn more about ${title}`}
+                >
+                  Learn more →
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </motion.section>
   );

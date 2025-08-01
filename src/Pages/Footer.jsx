@@ -1,15 +1,16 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
 
 function Footer() {
   return (
     <motion.footer
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.2 }}
       viewport={{ once: true }}
+      transition={{ duration: 1.2, ease: 'easeOut' }}
       className="bg-gray-800 text-center py-10 mt-20 px-6"
+      aria-label="Footer with social links"
     >
       <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-green-400">
         Connect with Me
@@ -21,7 +22,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-          className="hover:text-blue-500 transition"
+          className="hover:text-blue-500 transition focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
         >
           <FaFacebook />
         </a>
@@ -30,7 +31,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="hover:text-pink-500 transition"
+          className="hover:text-pink-500 transition focus:outline-none focus:ring-2 focus:ring-pink-500 rounded"
         >
           <FaInstagram />
         </a>
@@ -39,7 +40,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          className="hover:text-gray-300 transition"
+          className="hover:text-gray-300 transition focus:outline-none focus:ring-2 focus:ring-gray-300 rounded"
         >
           <FaGithub />
         </a>

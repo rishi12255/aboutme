@@ -1,13 +1,16 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 function Hero() {
   return (
     <motion.section
+      id="home"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1.8, ease: 'easeOut' }}
       className="flex flex-col items-center justify-center h-screen px-6 sm:px-12 text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"
+      tabIndex={-1}
+      aria-label="Introduction"
     >
       <h1
         tabIndex={0}
