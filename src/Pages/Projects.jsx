@@ -7,12 +7,20 @@ const projects = [
     description: 'A beautiful school portal built for online presence and interaction.',
   },
   {
-    title: 'Food Blog',
-    description: 'Share recipes and food experiences with a clean, responsive layout.',
+    title: 'Shoes Shop',
+    description: 'A modern eCommerce platform for trendy footwear.',
   },
   {
     title: 'Functional Calculator',
     description: 'A simple and effective calculator built with modern UI principles.',
+  },
+   {
+    title: 'Travel Blog',
+    description: 'Explore the world through my travel blog.',
+  },
+  {
+    title: 'Printed Shop',
+    description: 'You can create your own style',
   },
 ];
 
