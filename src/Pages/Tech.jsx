@@ -16,46 +16,47 @@ const techStack = [
 
 function Tech() {
   return (
-    <section id="tech" className="w-full bg-gray-900 py-20 px-4 sm:py-28 flex justify-center">
-      <div className="relative flex flex-col items-center max-w-4xl w-full">
+    <section
+      id="tech"
+      className="w-full bg-gray-900 py-16 px-2 flex justify-center overflow-hidden"
+    >
+      <div className="relative flex flex-col items-center max-w-5xl w-full">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          
-          className="text-center mb-16 sm:mb-20 px-2 sm:px-4"
+          className="text-center mb-16 px-2"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-200">
             Currently Working On
           </h2>
-          <p className="text-gray-300 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
+          <p className="text-gray-300 mt-4 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
             I use modern technologies to build scalable and responsive web applications.
           </p>
         </motion.div>
 
-        {/* Vertical Wire */}
+        {/* Timeline */}
         <div className="relative flex flex-col items-center w-full">
           {/* Main vertical wire */}
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-400"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-full bg-gray-400"></div>
 
-          {/* Tech Items */}
           {techStack.map((tech, index) => {
-            const isRight = index % 2 === 0; // alternate sides
-            const horizontalOffset = 48; // distance from main wire (can adjust per screen)
+            const isRight = index % 2 === 0;
 
             return (
               <div key={index} className="relative w-full flex justify-center">
                 {/* Connector */}
                 <div
-                  className="absolute top-0 h-1 bg-gray-400"
+                  className="absolute top-0 h-[2px] bg-gray-400"
                   style={{
-                    width: "6rem",
-                    left: isRight ? "50%" : "calc(50% - 6rem)",
+                    width: "clamp(3rem, 10vw, 6rem)",
+                    left: isRight ? "50%" : "auto",
+                    right: isRight ? "auto" : "50%",
                   }}
                 ></div>
 
-                
+                {/* Tech item */}
                 <motion.a
                   href={tech.link}
                   target="_blank"
@@ -63,28 +64,31 @@ function Tech() {
                   className="absolute flex items-center"
                   style={{
                     top: 0,
-                    left: isRight ? `calc(50% + ${horizontalOffset}px)` : "auto",
-                    right: isRight ? "auto" : `calc(50% + ${horizontalOffset}px)`,
+                    left: isRight
+                      ? "calc(50% + clamp(18px, 5vw, 48px))"
+                      : "auto",
+                    right: isRight
+                      ? "auto"
+                      : "calc(50% + clamp(18px, 5vw, 48px))",
                   }}
-                  whileHover={{ scale: 1.15 }}
+                  whileHover={{ scale: 1.12 }}
                   whileTap={{ scale: 0.95 }}
                   animate={{
-                    rotate: [0, isRight ? 10 : -10, isRight ? -10 : 10, 0],
+                    rotate: [0, isRight ? 8 : -8, isRight ? -8 : 8, 0],
                   }}
-                 
                 >
                   {/* Icon */}
-                  <div className="bg-gray-800/30 backdrop-blur-md p-3 sm:p-4 rounded-full shadow-lg">
+                  <div className="bg-gray-800/40 backdrop-blur-md p-2 sm:p-3 md:p-4 rounded-full shadow-lg">
                     <img
                       src={tech.img}
                       alt={tech.name}
-                      className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                      className="w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20"
                     />
                   </div>
 
                   {/* Name */}
                   <span
-                    className={`text-white font-medium text-xs sm:text-sm md:text-base ml-2 sm:ml-3 ${
+                    className={`text-white font-medium ml-2 text-xs sm:text-sm md:text-base ${
                       isRight ? "text-left" : "text-right"
                     }`}
                   >
