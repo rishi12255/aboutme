@@ -23,7 +23,7 @@ function Tech() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          
           className="text-center mb-16 sm:mb-20 px-2 sm:px-4"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-200">
@@ -55,7 +55,7 @@ function Tech() {
                   }}
                 ></div>
 
-                {/* Icon and name container */}
+                
                 <motion.a
                   href={tech.link}
                   target="_blank"
@@ -71,11 +71,7 @@ function Tech() {
                   animate={{
                     rotate: [0, isRight ? 10 : -10, isRight ? -10 : 10, 0],
                   }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 3 + index * 0.3,
-                    ease: "easeInOut",
-                  }}
+                 
                 >
                   {/* Icon */}
                   <div className="bg-gray-800/30 backdrop-blur-md p-3 sm:p-4 rounded-full shadow-lg">

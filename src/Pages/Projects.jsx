@@ -32,7 +32,7 @@ function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1.5, ease: 'easeOut' }}
-      className="py-28 px-1 max-w-7xl  mx-auto"
+      className="py-28 px-1  max-w-7xl  mx-auto"
       tabIndex={-1}
       aria-label="Projects showcase"
     >
